@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <button @click="getDrillingRigList">Fetch</button>
   </div>
 </template>
 
@@ -16,13 +15,11 @@ export default {
   methods: {
     ...mapActions({
       fetchDrillingRigList: "fetchDrillingRigList"
-    }),
+    })
+  },
 
-    getDrillingRigList() {
-      console.log("FETCF", this.$store);
-
-      this.fetchDrillingRigList();
-    }
+  mounted() {
+    this.fetchDrillingRigList();
   }
 };
 </script>

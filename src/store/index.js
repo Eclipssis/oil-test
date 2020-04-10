@@ -10,13 +10,11 @@ export default new Vuex.Store({
   mutations: {},
   actions: {
     async fetchDrillingRigList() {
-      console.log("FETCh", config);
-
       try {
         const url = `${config.domain}/test-task?year=2019`;
-        console.log("axios", axios);
         const response = await axios.get(url);
         console.log("response", response);
+        return response;
       } catch (error) {
         // TODO add error notification
         console.log("add error notification");
